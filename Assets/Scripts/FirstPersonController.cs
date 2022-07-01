@@ -117,11 +117,11 @@ namespace StarterAssets
 			GroundedCheck();
 			Move();
 
-			if(Input.GetKey(KeyCode.P))
+			if(Input.GetKeyDown(KeyCode.P))
 			{
 				SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 			}
-			if(Input.GetKey(KeyCode.L))
+			if(Input.GetKeyDown(KeyCode.L))
 			{
 				SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
 			}
@@ -187,7 +187,7 @@ namespace StarterAssets
 				_speed = Mathf.Lerp(currentHorizontalSpeed, targetSpeed * inputMagnitude, Time.deltaTime * SpeedChangeRate);
 
 				// round speed to 3 decimal places
-				_speed = Mathf.Round(_speed * 1000f) / 1000f;
+				_speed = Mathf.Round(_speed * 850f) / 1000f;
 			}
 			else
 			{
