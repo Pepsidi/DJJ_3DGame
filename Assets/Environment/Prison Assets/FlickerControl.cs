@@ -19,9 +19,11 @@ public class FlickerControl : MonoBehaviour
     {
         isFlickering = true;
         this.gameObject.GetComponent<Light>().enabled = false;
+        this.gameObject.GetComponent<AudioSource>().enabled = false;
         timeDelay = Random.Range(0.02f, 0.5f);
         yield return new WaitForSeconds(timeDelay);
         this.gameObject.GetComponent<Light>().enabled = true;
+        this.gameObject.GetComponent<AudioSource>().enabled = true;
         timeDelay = Random.Range(0.01f, 0.5f);
         yield return new WaitForSeconds(timeDelay);
         isFlickering = false;
